@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# colors %_% so sexYXyyyXyy
+alias \
+				ls="ls -hN --color=auto " \
+				la="ls -a" \
+				grep="grep --color=auto" \
+				diff="diff --color=auto" \
+				ccat="highlight --out-format=ansi"
+# so hard to write
+alias \
+				zdot="~/.config/zsh" \
+				cls="clear" \
+				q="exit" \
+				p="sudo pacman"	\
+				f="$FILE" \
+				v="$EDITOR"
+# own alias for running java fast sex
+# todo work on the shell function doesn't work correctly
+alias run-java='function lol() {javac "$1.java" && java "$1";unset -f lol}; lol'
