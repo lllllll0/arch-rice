@@ -20,5 +20,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'skammer/vim-css-color'
     " Theme
     Plug 'joshdick/onedark.vim'
+    " Statusline
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()

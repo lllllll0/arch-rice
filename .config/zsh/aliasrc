@@ -12,6 +12,7 @@ alias \
 				ccat="highlight --out-format=ansi"
 # so hard to write
 alias \
+				vim="nvim" \
 				zdot="~/.config/zsh" \
 				cls="clear" \
 				q="exit" \
