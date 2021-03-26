@@ -18,7 +18,12 @@ alias \
 				q="exit" \
 				p="sudo pacman"	\
 				f="$FILE" \
-				v="$EDITOR"
+				v="$EDITOR" \
+				b="$BROWSER"
+# Locations
+alias \
+				desktop="~/Desktop" \
+
 # own alias for running java fast sex
-# todo work on the shell function doesn't work correctly
 alias run-java='function lol() {javac "$1.java" && java "$1";unset -f lol}; lol'
+
