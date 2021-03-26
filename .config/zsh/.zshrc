@@ -8,6 +8,9 @@
 export TERM="xterm-256color"       # colors
 autoload -U colors && colors
 
+# fix auto compilation bug
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 # PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 # PS1="%B%{$fg[green]%}[%{$fg[white]%}%n%{$fg[green]%}@%{$fg[black]%}%M %{$fg[white]%}%~%{$fg[green]%}]%{$fg[white]%}>$reset_color%b "
 # PS1="%B%{$fg[green]%}[%{$fg[white]%}%n%{$fg[green]%}@%{$fg[black]%}archlinux %{$fg[magenta]%}%~%{$fg[green]%}]%{$fg[white]%}>$reset_color%b "
@@ -15,8 +18,8 @@ autoload -U colors && colors
 #PROMPT="%B♞ [%{$fg[cyan]%}%~%{$fg[white]%}] 
 # → %b"
 
-PROMPT="%B♞ $fg[black][%{$fg[green]%}%~%{$fg[black]%}] 
-$fg[white]→ %b "
+PROMPT="%{$fg_bold[white]%}♞ %{$fg_bold[black]%}[%{$fg_bold[green]%}%~%{$fg_bold[black]%}] 
+%{$reset_color%}→ "
 
 #cd tweaks
 setopt autocd # entering location will auto cd to it
