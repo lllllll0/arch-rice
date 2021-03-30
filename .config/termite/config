@@ -306,6 +306,7 @@ color252=       #d0d0d0
 color253=       #dadada
 color254=       #e4e4e4
 color255=       #eeeeee
+
 [hints]
 #font = Monospace 12
 #foreground = #dcdccc

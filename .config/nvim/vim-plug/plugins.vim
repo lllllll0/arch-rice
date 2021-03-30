@@ -19,7 +19,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " CSS COLORS sexy
     Plug 'skammer/vim-css-color'
     " Theme
-    Plug 'joshdick/onedark.vim'
+    Plug 'zacanger/angr.vim'
     " Statusline
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'

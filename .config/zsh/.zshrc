@@ -18,8 +18,14 @@ export EDITOR="nvim"
 #PROMPT="%B♞ [%{$fg[cyan]%}%~%{$fg[white]%}] 
 # → %b"
 
-PROMPT="%{$fg_bold[white]%}♞ %{$fg_bold[black]%}[%{$fg_bold[green]%}%~%{$fg_bold[black]%}] 
-%{$reset_color%}→ "
+#PROMPT="%{$fg_bold[white]%}♞ %{$fg_bold[black]%}[%{$fg_bold[green]%}%~%{$fg_bold[black]%}] 
+#%{$reset_color%}→  "
+
+#PROMPT="%{$fg_bold[white]%}♞ %{$fg_bold[black]%}[%{$fg_bold[white]%}%~%{$fg_bold[black]%}] 
+#%{$fg_bold[black]%}→ %{$reset_color%} "
+
+PROMPT="%{$fg_bold[white]%}♞ %{$fg_bold[yellow]%}[%{$fg_bold[blue]%}%~%{$fg_bold[yellow]%}] 
+%{$fg_bold[white]%}→ %{$reset_color%} "
 
 #cd tweaks
 setopt autocd # entering location will auto cd to it
@@ -57,23 +63,23 @@ source /home/audioz/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highl
 typeset -A ZSH_HIGHLIGHT_STYLES
 
 ZSH_HIGHLIGHT_STYLES[default]=none
-ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=009,bold
+ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=85,bold
 ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=009,standout
-ZSH_HIGHLIGHT_STYLES[alias]=fg=green,bold
-ZSH_HIGHLIGHT_STYLES[builtin]=fg=blue,bold
-ZSH_HIGHLIGHT_STYLES[function]=fg=blue,bold
-ZSH_HIGHLIGHT_STYLES[command]=fg=green,bold
-ZSH_HIGHLIGHT_STYLES[precommand]=fg=white,underline
+ZSH_HIGHLIGHT_STYLES[alias]=fg=blue,bold
+ZSH_HIGHLIGHT_STYLES[builtin]=fg=84,bold
+ZSH_HIGHLIGHT_STYLES[function]=fg=84,bold
+ZSH_HIGHLIGHT_STYLES[command]=fg=84,bold
+ZSH_HIGHLIGHT_STYLES[precommand]=fg=yellow,underline
 ZSH_HIGHLIGHT_STYLES[commandseparator]=none
 ZSH_HIGHLIGHT_STYLES[hashed-command]=fg=009
 ZSH_HIGHLIGHT_STYLES[path]=fg=214,underline
 ZSH_HIGHLIGHT_STYLES[globbing]=fg=063
 ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=white,underline
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=non
-ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=none
-ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=063
-ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=063
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=214
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=214
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=fg=214
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=yellow
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=yellow
 ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=009
 ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=009
 ZSH_HIGHLIGHT_STYLES[assign]=none
