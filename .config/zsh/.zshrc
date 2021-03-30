@@ -65,10 +65,10 @@ typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[default]=none
 ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=85,bold
 ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=009,standout
-ZSH_HIGHLIGHT_STYLES[alias]=fg=blue,bold
-ZSH_HIGHLIGHT_STYLES[builtin]=fg=84,bold
-ZSH_HIGHLIGHT_STYLES[function]=fg=84,bold
-ZSH_HIGHLIGHT_STYLES[command]=fg=84,bold
+ZSH_HIGHLIGHT_STYLES[alias]=fg=81,bold
+ZSH_HIGHLIGHT_STYLES[builtin]=fg=81,bold
+ZSH_HIGHLIGHT_STYLES[function]=fg=81,bold
+ZSH_HIGHLIGHT_STYLES[command]=fg=81,bold
 ZSH_HIGHLIGHT_STYLES[precommand]=fg=yellow,underline
 ZSH_HIGHLIGHT_STYLES[commandseparator]=none
 ZSH_HIGHLIGHT_STYLES[hashed-command]=fg=009
