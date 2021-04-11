@@ -12,6 +12,8 @@ autoload -U colors && colors
 export BROWSER="brave"
 export FILE="thunar"
 export EDITOR="nvim"
+export XDG_CONFIG_HOME="/home/audioz/.config"
+export ZDOT="~/.config/zsh/aliasrc"
 # PROMPT="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 # PROMPT="%B%{$fg[green]%}[%{$fg[white]%}%n%{$fg[green]%}@%{$fg[black]%}%M %{$fg[white]%}%~%{$fg[green]%}]%{$fg[white]%}>$reset_color%b "
 # PROMPT="%B%{$fg[green]%}[%{$fg[white]%}%n%{$fg[green]%}@%{$fg[black]%}archlinux %{$fg[magenta]%}%~%{$fg[green]%}]%{$fg[white]%}>$reset_color%b "
@@ -24,9 +26,12 @@ export EDITOR="nvim"
 #PROMPT="%{$fg_bold[white]%}♞ %{$fg_bold[black]%}[%{$fg_bold[white]%}%~%{$fg_bold[black]%}] 
 #%{$fg_bold[black]%}→ %{$reset_color%} "
 
-PROMPT="%{$fg_bold[cyan]%}☁  %{$fg_bold[yellow]%}[%{$fg_bold[blue]%}%~%{$fg_bold[yellow]%}] 
-%{$fg_bold[black]%}→ %{$reset_color%} "
+#PROMPT="%{$fg_bold[black]%}%n%{$fg_bold[magenta]%}@%{$fg_bold[white]%}archlinux %{$fg_bold[yellow]%}[%{$fg_bold[blue]%}%~%{$fg_bold[yellow]%}] 
+#%{$fg_bold[green]%}λ%{$reset_color%} "
 
+#PROMPT="%{$fg_bold[yellow]%}[%{$fg_bold[black]%}%n %{$fg_bold[white]%}%~%{$fg_bold[yellow]%}]
+#%{$fg_bold[green]%}~λ%{$reset_color%} "
+PROMPT="%{$fg_bold[white]%}%~ λ%{$reset_color%} "
 #cd tweaks
 setopt autocd # entering location will auto cd to it
 
@@ -45,7 +50,7 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 setopt HIST_VERIFY # Don't execute immediately upon history expansion.
 
 # Load alias
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc"
+source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc"
 
 
 # Basic auto/tab complete:
@@ -63,12 +68,12 @@ source /home/audioz/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highl
 typeset -A ZSH_HIGHLIGHT_STYLES
 
 ZSH_HIGHLIGHT_STYLES[default]=none
-ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=85,bold
+ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=009,bold
 ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=009,standout
-ZSH_HIGHLIGHT_STYLES[alias]=fg=81,bold
-ZSH_HIGHLIGHT_STYLES[builtin]=fg=81,bold
-ZSH_HIGHLIGHT_STYLES[function]=fg=81,bold
-ZSH_HIGHLIGHT_STYLES[command]=fg=81,bold
+ZSH_HIGHLIGHT_STYLES[alias]=fg=white,bold
+ZSH_HIGHLIGHT_STYLES[builtin]=fg=white,bold
+ZSH_HIGHLIGHT_STYLES[function]=fg=white,bold
+ZSH_HIGHLIGHT_STYLES[command]=fg=white,bold
 ZSH_HIGHLIGHT_STYLES[precommand]=fg=yellow,underline
 ZSH_HIGHLIGHT_STYLES[commandseparator]=none
 ZSH_HIGHLIGHT_STYLES[hashed-command]=fg=009
@@ -86,6 +91,7 @@ ZSH_HIGHLIGHT_STYLES[assign]=none
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # neofetch shit that i had to do because of termite :(
-trap boi SIGINT
-boi(){clear; trap - SIGINT; trap}
+# trap boi SIGINT
+# boi(){clear; trap - SIGINT; trap}
+(cat ~/.config/wpg/sequences &)
 neofetch

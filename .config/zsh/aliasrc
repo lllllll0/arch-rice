@@ -24,6 +24,10 @@ alias \
 alias \
 				desktop="~/Desktop" \
 
+# bruh
+alias \
+	"rm -i"="rm -i" \
+	"rm -rf"="rm -rfi"
 # own alias for running java fast sex
 alias run-java='function lol() {javac "$1.java" && java "$1";unset -f lol}; lol'
 
