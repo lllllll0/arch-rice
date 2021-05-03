@@ -8,6 +8,8 @@ lxpolkit &
 # Layout
 setxkbmap -layout us,il
 setxkbmap -option 'grp:alt_shift_toggle'
+# Mouse
+xinput --set-prop 12 'libinput Accel Speed' -1
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
