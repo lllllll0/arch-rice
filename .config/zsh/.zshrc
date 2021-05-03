@@ -5,7 +5,7 @@
 
 # Starting with zsh ;)                          
                           
-export TERM="xterm-256color"       # colors
+export TERM="termite"       # colors
 autoload -U colors && colors
 
 # sets
@@ -13,7 +13,8 @@ export BROWSER="brave"
 export FILE="thunar"
 export EDITOR="nvim"
 export XDG_CONFIG_HOME="/home/audioz/.config"
-export ZDOT="~/.config/zsh/aliasrc"
+export ZDOT="/home/audioz/.config/zsh/"
+export PATH=$PATH:/home/audioz/.local/bin
 # PROMPT="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 # PROMPT="%B%{$fg[green]%}[%{$fg[white]%}%n%{$fg[green]%}@%{$fg[black]%}%M %{$fg[white]%}%~%{$fg[green]%}]%{$fg[white]%}>$reset_color%b "
 # PROMPT="%B%{$fg[green]%}[%{$fg[white]%}%n%{$fg[green]%}@%{$fg[black]%}archlinux %{$fg[magenta]%}%~%{$fg[green]%}]%{$fg[white]%}>$reset_color%b "
@@ -94,4 +95,4 @@ ZSH_HIGHLIGHT_STYLES[assign]=none
 # trap boi SIGINT
 # boi(){clear; trap - SIGINT; trap}
 (cat ~/.config/wpg/sequences &)
-neofetch
+fm6000 -r

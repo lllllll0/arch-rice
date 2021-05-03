@@ -22,12 +22,14 @@ alias \
 				b="$BROWSER"
 # Locations
 alias \
-				desktop="~/Desktop" \
+				desktop="$HOME/Desktop" \
+				config="$XDG_CONFIG_HOME" \
+				downloads="$HOME/Downloads"
 
-# bruh
-alias \
-	"rm -i"="rm -i" \
-	"rm -rf"="rm -rfi"
+# bruh some shit happened to me don't question it
+alias rm="trash"
+
+
 # own alias for running java fast sex
 alias run-java='function lol() {javac "$1.java" && java "$1";unset -f lol}; lol'
 

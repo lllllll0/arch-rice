@@ -1,5 +1,5 @@
-source $HOME/.config/nvim/vim-plug/plugins.vim
-source $HOME/.config/nvim/plug-config/coc.vim
+source $XDG_CONFIG_HOME/nvim/vim-plug/plugins.vim
+source $XDG_CONFIG_HOME/nvim/plug-config/coc.vim
 
 
 " Tweaks
@@ -18,8 +18,7 @@ set autoindent smartindent
 set incsearch
 
 syntax on
-colorscheme angr
-let g:airline_theme='angr'
+let g:airline_theme='atomic'
 
 highlight Normal ctermbg=none guibg=none
 highlight SignColumn ctermbg=none guibg=none
