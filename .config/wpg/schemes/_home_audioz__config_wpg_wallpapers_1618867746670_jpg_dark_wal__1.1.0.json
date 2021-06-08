@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/audioz/.config/wpg/wallpapers/1618867746670.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#010102",
+        "foreground": "#dcdfe1",
+        "cursor": "#dcdfe1"
+    },
+    "colors": {
+        "color0": "#010102",
+        "color1": "#798693",
+        "color2": "#949DAB",
+        "color3": "#95A7BC",
+        "color4": "#A2B4C6",
+        "color5": "#C0BFC5",
+        "color6": "#B6C3CE",
+        "color7": "#dcdfe1",
+        "color8": "#9a9c9d",
+        "color9": "#798693",
+        "color10": "#949DAB",
+        "color11": "#95A7BC",
+        "color12": "#A2B4C6",
+        "color13": "#C0BFC5",
+        "color14": "#B6C3CE",
+        "color15": "#dcdfe1"
+    }
+}
