@@ -50,8 +50,10 @@ scroll-down = bspwm-deskprev
 
 [module/layout]
 type = custom/script
-exec = setxkbmap -v | awk -F "+" '/symbols/ {print $2}'
+tail = true
+exec = xkblayout-state print %e
 label = %output%
+click-left = xkblayout-state set +1
 
 [module/bspwm]
 type = internal/bspwm
@@ -69,7 +71,7 @@ label-urgent = %name%!
 label-urgent-background = ${colors.primary}
 label-urgent-padding = 1
 
-label-empty = %name%
+label-empty =
 label-empty-foreground = ${colors.first}
 label-empty-padding = 1
 
@@ -80,7 +82,7 @@ label-separator =
 type = internal/xwindow
 label = %title%
 label-maxlen = 50
-label-padding = 1
+label-padding = 20
 
 [module/cpu]
 type = internal/cpu

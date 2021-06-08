@@ -2,9 +2,9 @@
 # wm independent hotkeys
 #
 
-# terminal emulator
+# terminal emulator porn
 super + Return
-	termite
+	alacritty
 
 # browser
 Home

@@ -16,6 +16,7 @@ set nowrap
 set formatoptions=qrn1
 set autoindent smartindent
 set incsearch
+set clipboard^=unnamed,unnamedplus
 
 syntax on
 let g:airline_theme='atomic'

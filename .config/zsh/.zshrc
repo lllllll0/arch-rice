@@ -32,7 +32,7 @@ export PATH=$PATH:/home/audioz/.local/bin
 
 #PROMPT="%{$fg_bold[yellow]%}[%{$fg_bold[black]%}%n %{$fg_bold[white]%}%~%{$fg_bold[yellow]%}]
 #%{$fg_bold[green]%}~λ%{$reset_color%} "
-PROMPT="%{$fg_bold[white]%}%~ λ%{$reset_color%} "
+PROMPT="%{$fg_bold[red]%}%~ λ%{$reset_color%} "
 #cd tweaks
 setopt autocd # entering location will auto cd to it
 
@@ -91,8 +91,5 @@ ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=009
 ZSH_HIGHLIGHT_STYLES[assign]=none
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# neofetch shit that i had to do because of termite :(
-# trap boi SIGINT
-# boi(){clear; trap - SIGINT; trap}
+neofetch
 (cat ~/.config/wpg/sequences &)
-fm6000 -r
