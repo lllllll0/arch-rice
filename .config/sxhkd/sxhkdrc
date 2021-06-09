@@ -15,7 +15,7 @@ super + shift + s
 				flameshot gui
 # program launcher
 super + r
-	rofi -show run
+	rofi -show run 
 
 # thunar
 super + e

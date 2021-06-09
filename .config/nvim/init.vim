@@ -25,6 +25,9 @@ highlight Normal ctermbg=none guibg=none
 highlight SignColumn ctermbg=none guibg=none
 highlight LineNr ctermbg=none guibg=none
 
+" nerdtree
+let NERDTreeShowHidden=1
+
 "Shortcut sex
 let mapleader = " "
 

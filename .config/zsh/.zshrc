@@ -1,3 +1,4 @@
+#! /bin/bash
 #	  ____ ___  ______/ (_)___  ____
 #	 / __ `/ / / / __  / / __ \/_  /
 #	/ /_/ / /_/ / /_/ / / /_/ / / /_
@@ -14,7 +15,7 @@ export FILE="thunar"
 export EDITOR="nvim"
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZDOT="/home/audioz/.config/zsh/"
-export PATH=$PATH:/home/audioz/.local/bin
+export PATH=$PATH:~/.local/bin
 
 #PROMPT="%{$fg_bold[white]%}♞ %{$fg_bold[black]%}[%{$fg_bold[white]%}%~%{$fg_bold[black]%}] 
 #%{$fg_bold[black]%}→ %{$reset_color%} "
@@ -27,8 +28,8 @@ setopt autocd # entering location will auto cd to it
 # History in cache directory:
 HISTSIZE=10000
 SAVEHIST=10000
-[ ! -e "${XDG_CONFIG_HOME}" ]
-HISTFILE=~/.cache/zsh/history
+[ -e "$HOME/.cache/zsh/history" ] && HISTFILE=~/.cache/zsh/history
+
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
 setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
