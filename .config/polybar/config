@@ -1,25 +1,30 @@
+# [colors]
+# background = #aa000000
+# foreground = #eee
+# first = #696969 
+# second = #fffafa
+# cyan = #00FFFF
+# foreground-alt =  	#689d6a
+# primary = #990f0f
+
 [colors]
 background = #aa000000
-foreground = #eee
-first = #696969 
-second = #fffafa
-cyan = #00FFFF
-foreground-alt =  	#689d6a
-primary = #990f0f
+background-alt = #444
+foreground = #dfdfdf
+foreground-alt = #555
+primary = #871e1e
+secondary = #e60053
+alert = #bd2c40
 
 [bar/main]
 width = 100%
-height = 22 
-offset-x = 0
-offset-y = 0 
-;bottom = true
+height = 25
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 underline-size = 2
 underline-color = #eee
-
 spacing = 1
 padding-left = 0
 padding-right = 0
@@ -31,13 +36,13 @@ font-1 = FontAwesome:size=10;-2
 font-2 = siji:pixelsize=10;0
 font-3 = DavidLibre:pixelsize=10;0
 
-modules-left = bspwm xwindow
-modules-center = 
-modules-right = memory cpu pulseaudio-control date powermenu layout
+modules-left = bspwm 
+modules-center = xwindow
+modules-right = pulseaudio-control memory cpu date layout powermenu 
 
 tray-position = right
-tray-padding = 2
-tray-background = ${colors.background}
+tray-padding = 1
+tray-detached = false
 
 wm-restack = bspwm
 
@@ -52,7 +57,7 @@ scroll-down = bspwm-deskprev
 type = custom/script
 tail = true
 exec = xkblayout-state print %e
-label = %output%
+label ="   %output%"
 click-left = xkblayout-state set +1
 
 [module/bspwm]
@@ -87,9 +92,9 @@ label-padding = 20
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = "  "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = ${colors.foreground-alt}
 label = %percentage:2%%
 
 [module/memory]
@@ -97,54 +102,24 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+format-underline = #871e1e 
 label = %percentage_used%%
 
 [module/date]
 type = internal/date
+interval = 5
 
-; Seconds to sleep between updates
-interval = 1.0
+date =
+date-alt = " %Y-%m-%d"
 
-; See "man date" for details on how to format the date string
-; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = %a %b %d, 
+time = %I:%M
+time-alt = %I:%M:%S
 
-; Optional time format
-time = %H:%M
-
-; if `date-alt` or `time-alt` is defined, clicking
-; the module will toggle between formats
-date-alt = %d/%m/%y, 
-time-alt = %H:%M:%S
+format-prefix = "🕓 "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #871e1e
 
 label = %date% %time%
-format =    <label>
-	;format-background = #ddffffff
-	format-background = ${colors.background}
-;format-foreground = #333
-format-padding = 3
-
-[module/padding]
-type = custom/text
-content = 	 
-content-foreground = #00000000
-content-background = #55000000
-
-[module/backlight]
-type = internal/backlight
-
-card = intel_backlight
-enable-scroll = true
-
-format = <ramp> <label>
-label = %percentage%
-
-ramp-0 = 🌕
-ramp-1 = 🌔
-ramp-2 = 🌓
-ramp-3 = 🌒
-ramp-4 = 🌑
 
 [module/pulseaudio-control]
 type = custom/script
@@ -166,7 +141,7 @@ scroll-down = pulseaudio-control --volume-max 130 down
 [module/powermenu]
 type = custom/menu
 
-label-open =   
+label-open =  
 ;label-open-background = #dd0000
 ;label-open-foreground = #fff
 label-close = cancel
@@ -190,3 +165,5 @@ menu-2-0 = power off?
 menu-2-0-exec = systemctl poweroff
 menu-2-0-padding = 3
 
+[settings]
+screenchange-reload = true

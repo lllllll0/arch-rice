@@ -1,7 +1,8 @@
 #! /bin/sh
 
 pgrep -x sxhkd > /dev/null || sxhkd &
-feh --bg-fill ~/Desktop/Wallpapers/17-174847_animals-national-geographic-animal-wallpaper-hd-high-resolution.jpg &
+exec feh --bg-scale ~/Desktop/Wallpapers/noice.jpg &
+
 xset b off &
 picom &
 lxpolkit &
@@ -12,7 +13,13 @@ xinput --set-prop 12 'libinput Accel Speed' -1
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
-bspc config focused_border_color "#4c4f4f"
+
+bspc config focused_border_color "#871e1e"
+bspc config normal_border_color  "#620404"
+
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+bspc config merge_overlapping_monitors true
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -30,11 +37,14 @@ bspc config click_to_focus true
 bspc rule --add Brave-browser desktop=^1 follow=on state=tiled
 bspc rule --add Alacritty desktop=^2 follow=on state=tiled
 bspc rule --add discord desktop=^3 follow=on state=tiled
+bspc rule --add steam desktop=^4 follow=on state=tiled
+bspc rule --add lunarclient desktop=^4 follow=on state=tiled
 
 # Startup apps 
 pgrep -x flameshot > /dev/null || flameshot &
 pgrep -x kdeconnect-indicator > /dev/null || kdeconnect-indicator &
 pgrep -x nm-applet > /dev/null || nm-applet &
+pgrep -x corectrl > /dev/null || corectrl &
 
 # Polybar
 bash /home/audioz/.config/polybar/launch.sh &

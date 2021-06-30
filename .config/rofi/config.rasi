@@ -1,0 +1,31 @@
+configuration {
+	modi: "window,drun,ssh,combi,run";
+	width: 50;
+	lines: 15;
+	columns: 1;
+	font: "roboto mono 10";
+	bw: 5;
+	location: 0;
+	padding: 5;
+	yoffset: 0;
+	xoffset: 0;
+	fixed-num-lines: true;
+	terminal: "rofi-sensible-terminal";
+	ssh-client: "ssh";
+	ssh-command: "{terminal} -e {ssh-client} {host}";
+	run-command: "{cmd}";
+	parse-hosts: true;
+	combi-modi: "window,drun,ssh";
+	matching: "normal";
+	separator-style: "none";
+	scrollbar-width: 0;
+	color-normal: "#090f18, #e1bcb5, #090f18, #ad1e3e, #e1bcb5";
+	color-urgent: "#090f18, #d6b48d, #22231D, #d6b48d, #e1bcb5";
+	color-active: "#090f18, #DD5858, #090f18, #DD5858, #090f18";
+	color-window: "#090f18, #ad1e3e, #77152b";
+	kb-mode-next: "Shift+Right,Control+Tab,Alt+l";
+	kb-mode-previous: "Shift+Left,Control+Shift+Tab,Alt+h";
+	kb-row-up: "Up,Control+p,Shift+Tab,Shift+ISO_Left_Tab,Alt+k";
+	kb-row-down: "Down,Control+n,Alt+j";
+	combi-modi: "window,drun,ssh,run";
+}
