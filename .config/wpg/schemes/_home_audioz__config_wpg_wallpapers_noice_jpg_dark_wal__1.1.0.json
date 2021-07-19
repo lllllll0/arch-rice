@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/audioz/.config/wpg/wallpapers/noice.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#090606",
+        "foreground": "#f0c6c6",
+        "cursor": "#f0c6c6"
+    },
+    "colors": {
+        "color0": "#090606",
+        "color1": "#8E1616",
+        "color2": "#A61E1F",
+        "color3": "#D42626",
+        "color4": "#CC4345",
+        "color5": "#E65A59",
+        "color6": "#E77B83",
+        "color7": "#f0c6c6",
+        "color8": "#a88a8a",
+        "color9": "#8E1616",
+        "color10": "#A61E1F",
+        "color11": "#D42626",
+        "color12": "#CC4345",
+        "color13": "#E65A59",
+        "color14": "#E77B83",
+        "color15": "#f0c6c6"
+    }
+}

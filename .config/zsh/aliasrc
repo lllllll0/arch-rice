@@ -18,6 +18,7 @@ alias \
 				zdot='~/.config/zsh' \
 				cls='clear' \
 				q='exit' \
+				handbrake='ghb' \
 				p='sudo pacman'	\
 				f='$FILE' \
 				v='$EDITOR' \
@@ -35,7 +36,6 @@ alias rm="trash"
 
 # Other
 
-# own alias for running java fast sex
 alias \
 				run-java='function lol() {javac "$1.java" && java "$1";unset -f lol}; lol' \
 				fping='function boi() {ping -O "$1" | sed "s/.*no answer yet.*/Request timeout/g";unset -f boi}; boi'

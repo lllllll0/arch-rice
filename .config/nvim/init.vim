@@ -2,7 +2,7 @@ source $XDG_CONFIG_HOME/nvim/vim-plug/plugins.vim
 source $XDG_CONFIG_HOME/nvim/plug-config/coc.vim
 
 
-" Tweaks
+" tweaks
 set encoding=utf-8
 set number                  " Enable line numbers.
 set showmode                " Show the current mode.
@@ -25,10 +25,17 @@ highlight Normal ctermbg=none guibg=none
 highlight SignColumn ctermbg=none guibg=none
 highlight LineNr ctermbg=none guibg=none
 
+
+" disable arrow keys
+nnoremap <Left> :echo "No left arrow for you!"<CR>
+nnoremap <Right> :echo "No right arrow for you!"<CR>
+nnoremap <Up> :echo "No up arrow for you!"<CR>
+nnoremap <Down> :echo "No down arrow for you!"<CR>
+
 " nerdtree
 let NERDTreeShowHidden=1
 
-"Shortcut sex
+" shortcut sex
 let mapleader = " "
 
 nnoremap <leader>w :NERDTreeToggle<CR>
